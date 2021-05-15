@@ -8,6 +8,7 @@ fun diff f x = (f (x + dx) - f x)/dx
 
 fun diffN n f = (repeat n diff) f
 
+
 val g = diffN 3 (fn x => Math.cos x)
 fun c x =  Math.sin x
 
