@@ -1,0 +1,1 @@
+fun kansai r d m = if m<=0 then 0 else  kansai r d (floor((1.0 + (r / 100.0) * (30.0 / 365.0)) * real m - real d)) + 1

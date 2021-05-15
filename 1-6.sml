@@ -1,0 +1,1 @@
+"I want " ^ (if (size "eat") + floor 4.6 >= 7 orelse real 3 > 7.89 then "a hamburger." else "a book.")

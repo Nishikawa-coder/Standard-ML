@@ -1,0 +1,30 @@
+1 式：　3.2 * 5 
+不正な箇所：int型とreal型の足し算になっている。
+エラーメッセージ：(interactive):1.0-1.6(6) Error:
+  (type inference 026) operator and operand don't agree
+  operator domain: 'HZF::{real, real32} * 'HZF::{real, real32}
+          operand: 'HZF::{real, real32} * 'HZD::{int, int8, int16, int64, ...}
+エラー内容：１行目の０文字目から１行目の六文字目にエラーが生じている.
+     足し算において、一番目の項と二番目の項はreal型で統一していなければならないのに、実際は一番目がreal型、二番目がint型になっている。
+
+2　式；　size 3
+不正な箇所：sizeは文字列の大きさをint型で返す物だが、それがint型の数字にかかっている。
+エラーメッセージ；(interactive):2.0-2.5(5) Error:
+  (type inference 026) operator and operand don't agree
+  operator domain: string
+          operand: 'HZJ::{int, int8, int16, int64, ...}
+エラー内容；２行目の０文字目から５文字目にエラーが生じている.srring型が入力されなければならないのに、int型になっている。
+
+３　式； if 0 then "Hi" else "Lo" 
+不正な箇所：０がtrueかどうかが分からない。
+エラーメッセージ；(interactive):4.0-4.23(23) Error:
+  (type inference 062) operator and operand don't agree
+  operator domain: bool
+          operand: 'HZR::{int, int8, int16, int64, ...}
+エラー内容；4行目の０文字目から23文字目にエラーが生じている.ifの判定の中身がbool型でないといけないのにint型になっている。
+
+４　式； 7 - -8
+不正な箇所：負の数を示す-は~でないといけない。
+エラーメッセージ；(interactive):1.4-1.4(4) Error:
+  expression or pattern begins with infix identifier : -
+エラー内容；１行目の４文字目から４文字目にエラーが生じている.-を使ってはだめ。
