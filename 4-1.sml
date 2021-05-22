@@ -1,0 +1,1 @@
+fun intro {surname, name, age} = "My name is " ^ name ^ " " ^ surname ^ ". I am " ^ Int.toString age ^ " years old."
