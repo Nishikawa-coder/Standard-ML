@@ -1,2 +1,2 @@
-fun listAppend nil (m :: l) = (m :: l)
-  | listAppend (h :: t) (m :: l) = h :: listAppend t (m :: l)
+fun listAppend nil L2 = L2
+  | listAppend (h :: t) L2 = h :: listAppend t L2
