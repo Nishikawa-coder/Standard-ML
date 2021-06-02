@@ -6,3 +6,6 @@ fun max nil = 0
     in 
         comp h (max t)
     end
+
+
+    (*回答ではmax tをvalで定義してin内で比較を用いて出力していた。*)
